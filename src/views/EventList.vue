@@ -1,5 +1,6 @@
 <template>
-  <div class="home">
+  <h1>Events For Good</h1>
+  <div class="events">
     <img alt="Vue logo" src="../assets/logo.png" />
     <EventCard v-for="event in events" :key="event.id" :event="event" />
   </div>
@@ -10,7 +11,7 @@
 import EventCard from '@/components/EventCard.vue'
 
 export default {
-  name: 'Home',
+  name: 'EventList',
   components: {
     EventCard,
   },
@@ -66,3 +67,10 @@ export default {
   },
 }
 </script>
+<style scoped>
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
